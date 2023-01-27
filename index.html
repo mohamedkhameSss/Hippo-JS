@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hippo is a javascript project with jquery libarary ">
+
+    <title>Hippo</title>
+    
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="loading">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+    </div>
+    <nav>
+        <div class="nav-body ">
+            <div class="container ">
+                <div class=" nav-content">
+                    <ul class="nav row mt-1 pb-5">
+                        <li class="nav-item col-12 m-3">
+                            <a class="nav-link text-white" id="searchLink"href="#" >Search</a>
+                        </li>
+                        <li class="nav-item col-12 m-3">
+                            <a class="nav-link text-white" id="CategoryLink" href="#" >Categories</a>
+                        </li>
+                        <li class="nav-item col-12 m-3">
+                            <a class="nav-link text-white" id="areaLink" href="#">Area</a>
+                        </li>
+                        <li class="nav-item col-12 m-3">
+                            <a class="nav-link text-white" id="Ingredients"  href="#">Ingredients</a>
+                        </li>
+                        <li class="nav-item col-12 m-3">
+                            <a class="nav-link text-white" id="conLink" href="#">Contact Us</a>
+                        </li>
+                        
+                    </ul>
+                    <div class=" mt-5">
+                        <div class=" my-3 d-flex  w-25  pt-2 ">
+                            <span><i class="fa-brands fa-facebook text-dark p-2"></i></span>
+                            <span><i class="fa-brands fa-instagram text-dark p-2"></i></span>
+                            <span><i class="fa-brands fa-twitter text-dark p-2"></i></span>
+
+                        </div>
+                        <div class="p-3">
+                            Copyright Â© 2019 All Rights Reserved</div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-border d-flex flex-column justify-content-center align-content-between">
+                <div class="col p-1"><i class="fa-solid fa-hippo fa-2x text-warning fa-beat"></i></div>
+                <div class="col closNav">
+                    <i id="close-nav" class="fa-solid fa-xmark fa-2x d-none "></i>
+                </div>
+                <div class="p-3">
+                    <i class="d-block fa-solid fa-globe py-2"></i>
+                    <i class="fa-solid fa-share-nodes py-2"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <section  class="CategorySection vh-100 ">
+        <div class="container">
+
+            <div class="row justify-content-center overflow-hidden "id="CategorySection" >
+
+            </div>
+        </div>
+    </section>
+    <section class=" search  w-100 d-none ">
+
+        <div class="container ">
+            <div class="row m-5 inputDiv">
+
+                <div class="col-12 col-md-6"><input id="nameSearchInput"
+                        class="text-center form-control  border-top-0 border-left-0 border-right-0 rounded-0"
+                        placeholder="Search By Name" type="text">
+                </div>
+                <div class="col-12 col-md-6"><input id="letterInput"
+                        class="text-center form-control  border-top-0 border-left-0 border-right-0 rounded-0"
+                        placeholder="Search By First Letter ...." type="text">
+                </div>
+            </div>
+            <div id="conayin" class="row justify-content-center bg-black"></div>
+        </div>
+    </section>
+    <section class="areaSection d-none">
+        <div class="container">
+            <div id="areaContainer" class="row justify-content-center bg-black"></div>
+        </div>
+    </section>
+    <section class="IngreSection d-none">
+        <div class="container">
+            <div id="IngredieContainer" class="row justify-content-center bg-black "></div>
+        </div>
+    </section>
+    <section class="contactSection d-none">
+        <div class="container">
+
+            <div id="ContactContainer" class="mt-5 pt-5">
+                <div>
+                    <h2 class="text-center text-light">ContacUs...</h2>
+                </div>
+                <div class="row m-5 inputDiv">
+
+                    <div class="col-12 col-sm-6"><input id="nameInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 "
+                            placeholder="Enter Your Name" type="text">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertname" role="alert">
+                            needed Field
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6"><input id="emailInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 "
+                            placeholder="Enter Your Email" type="email">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertEmail" role="alert">
+                            Email need to improve
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6"><input id="phoneInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 "
+                            placeholder="Enter Phone" type="tel">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertnumber" role="alert">
+                            Not Valid Numder
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6"><input id="ageInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 "
+                            placeholder="Enter Age" type="text">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertAge" role="alert">
+                            Min age 12
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6"><input id="passwInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 "
+                            placeholder="Enter Password" type="password">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertpass" role="alert">
+                            in valid Password
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6"><input id="rePassInput"
+                            class="text-center form-control  border-top-0 border-left-0 border-right-0 rounded-0"
+                            placeholder="Re-Enter Password" type="password">
+                        <div class="alert alert-danger m-3 p-0 d-none " id="alertrepass" role="alert">
+                            not Matched Password
+                        </div>
+                    </div>
+
+                </div>
+                <div class=" text-center">
+                    <button id="subBtn" class="m-auto btn btn-outline-danger" disabled disabled disabled disabled
+                        disabled type="submit">submit</button>
+                </div>
+            </div>
+
+    </section>
+    <section class="mainSection d-none" >
+        <div  class="container text-light ">
+
+        <div id="mainSection" class="row justify-content-center overflow-hidden   "></div>
+    </div>
+    </section>
+    <section class="detailes d-none">
+        <div  class="container text-light ">
+            <div id="detailes" class="row mt-5 overflow-hidden p-3"> </div>
+            </div>
+    </section>
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js" type="module"></script>
+
+</body>
+
+</html>
