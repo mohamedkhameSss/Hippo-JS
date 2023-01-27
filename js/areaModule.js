@@ -5,9 +5,9 @@ export class Area {
   constructor() {
     this.areaContainer = document.getElementById("areaContainer");
     $("#areaLink").click(() => {
+      $(".areaSection").removeClass("d-none");
       $(".CategorySection").addClass("d-none");
       $(".seaech").addClass("d-none");
-      $(".areaSection").removeClass("d-none");
       $(".contactSection").addClass("d-none");
       $(".IngreSection").addClass("d-none");
       $(".mainSection").addClass("d-none");

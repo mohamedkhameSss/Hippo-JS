@@ -8,11 +8,11 @@ export class SearchPage {
     this.regexWord = new RegExp(/^[a-zA-Z]{1,13}$/);
 
     $("#searchLink").click(function () {
+      $(".search").removeClass("d-none");
       $(".CategorySection").addClass("d-none");
       $(".areaSection").addClass("d-none");
       $(".IngreSection").addClass("d-none");
       $(".contactSection").addClass("d-none");
-      $(".search").removeClass("d-none");
       $(".mainSection").addClass("d-none");
       $(".detailes").addClass("d-none");
     });

@@ -5,11 +5,11 @@ export class strIngredient {
   constructor() {
     this.IngredieContainer = document.getElementById("IngredieContainer");
     $("#Ingredients").click(() => {
+      $(".IngreSection").removeClass("d-none");
       $(".CategorySection").addClass("d-none");
       $(".search").addClass("d-none");
       $(".areaSection").addClass("d-none");
       $(".contactSection").addClass("d-none");
-      $(".IngreSection").removeClass("d-none");
       $(".mainSection").addClass("d-none");
       $(".detailes").addClass("d-none");
       this.showIngr();

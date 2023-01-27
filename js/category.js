@@ -12,10 +12,10 @@ export class FirstPage {
     };
 
     $("#CategoryLink").click((e) => {
+      $(".CategorySection").removeClass("d-none");
       $(".mainSection").addClass("d-none");
       $(".detailes").addClass("d-none");
       this.displayNone();
-      $(".CategorySection").removeClass("d-none");
     });
     this.showData();
   }
@@ -54,14 +54,13 @@ export class FirstPage {
         dataList;
 
         this.categoryLink(dataList[i].strCategory);
-        console.log("nnnnnnnnnnnn");
       });
     }
   }
   async categoryLink(cateoryName) {
     this.displayNone();
-    $(".CategorySection").addClass("d-none");
     $(".mainSection").removeClass("d-none");
+    $(".CategorySection").addClass("d-none");
     let response = await this.fetchApi(
       `https://www.themealdb.com/api/json/v1/1/filter.php?c=${cateoryName}`
     );
@@ -88,9 +87,9 @@ export class FirstPage {
     }
   }
   async Instructions(strMealThumb, strMeal) {
+    $(".detailes").removeClass("d-none");
     $(".CategorySection").addClass("d-none");
     $(".mainSection").addClass("d-none");
-    $(".detailes").removeClass("d-none");
     this.displayNone();
     let response = await this.fetchApi(
       `https://www.themealdb.com/api/json/v1/1/search.php?s=${strMeal}`
@@ -101,7 +100,6 @@ export class FirstPage {
     let dataList = response.meals;
     for (let i = 1; i < 20; i++) {
       if (dataList[0][`strMeasure${i}`]) {
-        console.log(dataList[0][`strMeasure${i.length}`]);
         y +=
           dataList[0][`strMeasure${i}`] && dataList[0][`strMeasure${i}`] != " "
             ? `<span class="d-inline-block m-1 py-2 px-3 bg-info opacity-10 rounded">${

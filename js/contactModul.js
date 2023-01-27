@@ -13,6 +13,7 @@ export class Contact {
     this.alertrepass = document.getElementById("alertrepass");
     this.alertname = document.getElementById("alertname");
     $("#conLink").click(function () {
+      $(".contactSection").removeClass("d-none");
       $(".CategorySection").addClass("d-none");
       $(".IngreSection").addClass("d-none");
       $(".areaSection").addClass("d-none");
@@ -20,7 +21,6 @@ export class Contact {
 
       $(".mainSection").addClass("d-none");
       $(".detailes").addClass("d-none");
-      $(".contactSection").removeClass("d-none");
     });
     this.passValid = /^((?=\S*?[A-Z])(?=\S*?[a-z])(?=\S*?[0-9]).{6,})\S$/;
     this.emailValid =
